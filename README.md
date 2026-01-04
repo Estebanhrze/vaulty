@@ -42,7 +42,7 @@ cp .env.example .env
 php artisan key:generate
 
 # Configurar base de datos en .env
-# DB_DATABASE=vaulty
+DB_DATABASE=vaulty
 
 # Ejecutar migraciones
 php artisan migrate

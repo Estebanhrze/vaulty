@@ -9,6 +9,14 @@ use Illuminate\Http\Request;
 
 class PasswordController extends Controller
 {
+    public function destroy($id)
+    {
+        Password::where('user_id', auth()->id())
+            ->findOrFail($id)
+            ->delete();
+        
+        return response()->json(['success' => true]);
+    }
     public function show($id)
 {
     $password = Password::where('user_id', auth()->id())

@@ -23,6 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/passwords', [PasswordController::class, 'store']);
     Route::get('/passwords', [PasswordController::class, 'index']);
     Route::get('/passwords/{id}', [PasswordController::class, 'show']);
+    Route::delete('/passwords/{id}', [PasswordController::class, 'destroy']);
 });
 
 require __DIR__.'/auth.php';
